@@ -7,22 +7,22 @@
 const CONFIG = {
 
   empresa: {
-    nome: "CEVO",
+    nome: "VOCÊ + SAÚDE",
     slogan: "Odontologia séria, sorriso leve — para toda a família",
-    logoTexto: "CEVO",
+    logoTexto: "VOCÊ + SAÚDE",
   },
 
   contato: {
     telefone: "(11) 98888-8888",
     whatsapp: "5511988888888",
-    whatsappMensagemPadrao: "Olá! Quero agendar uma consulta na CEVO.",
-    email: "contato@cevoodonto.com.br",
+    whatsappMensagemPadrao: "Olá! Quero agendar uma consulta na VOCÊ + SAÚDE.",
+    email: "contato@vocesaude.com.br",
     endereco: "Vila Luzita, Santo André — SP",
     googleMapsLink: "https://maps.google.com/?q=Vila+Luzita+Santo+Andr%C3%A9",
   },
 
   redes: {
-    instagram: "https://instagram.com/cevo.odonto",
+    instagram: "https://www.instagram.com/cevolapasp/",
     facebook: "https://facebook.com/cevoodonto",
   },
 
@@ -51,9 +51,9 @@ const CONFIG = {
   },
 
   sobre: {
-    eyebrow: "Sobre a CEVO",
+    eyebrow: "Sobre a VOCÊ + SAÚDE",
     titulo: "Uma clínica que fala a língua dos pais e a língua das crianças",
-    texto: "Na CEVO, cada consulta é conduzida com técnica e cuidado — e também com paciência. Explicamos cada passo pros pais e transformamos a consulta em algo tranquilo (às vezes até divertido) pras crianças, sem perder o padrão clínico que qualquer tratamento odontológico exige.",
+    texto: "Na VOCÊ + SAÚDE, cada consulta é conduzida com técnica e cuidado — e também com paciência. Explicamos cada passo pros pais e transformamos a consulta em algo tranquilo (às vezes até divertido) pras crianças, sem perder o padrão clínico que qualquer tratamento odontológico exige.",
   },
 
   servicos: [
@@ -67,19 +67,19 @@ const CONFIG = {
       icone: "😁",
       nome: "Ortodontia",
       descricao: "Aparelhos fixos, móveis e alinhadores para todas as idades.",
-      preco: "a partir de R$ 150/mês",
+      //preco: "a partir de R$ 150/mês",
     },
     {
       icone: "✨",
       nome: "Clareamento",
       descricao: "Clareamento a laser ou caseiro supervisionado, com acompanhamento clínico.",
-      preco: "a partir de R$ 350",
+      //preco: "a partir de R$ 350",
     },
     {
       icone: "🩺",
       nome: "Limpeza & Prevenção",
       descricao: "Profilaxia, aplicação de flúor e check-up completo.",
-      preco: "a partir de R$ 120",
+      //preco: "a partir de R$ 120",
     },
     {
       icone: "🚨",
@@ -117,13 +117,13 @@ const CONFIG = {
     { legenda: "Atendimento infantil" },
     { legenda: "Sala de espera", tall: true },
     { legenda: "Consultório ortodontia" },
-    { legenda: "Equipe CEVO" },
+    { legenda: "Equipe VOCÊ + SAÚDE" },
   ],
 
   avaliacoes: [
-    { estrelas: 5, texto: "Meu filho tinha pavor de dentista. Na CEVO ele saiu pedindo pra voltar. Isso não tem preço.", autora: "Paciente CEVO" },
-    { estrelas: 5, texto: "Explicaram todo o orçamento antes de começar, sem surpresa na hora de pagar.", autora: "Paciente CEVO" },
-    { estrelas: 5, texto: "Atendimento pontual e equipe super atenciosa com toda a família.", autora: "Paciente CEVO" },
+    { estrelas: 5, texto: "Meu filho tinha pavor de dentista. Na VOCÊ + SAÚDE ele saiu pedindo pra voltar. Isso não tem preço.", autora: "Paciente VOCÊ + SAÚDE" },
+    { estrelas: 5, texto: "Explicaram todo o orçamento antes de começar, sem surpresa na hora de pagar.", autora: "Paciente VOCÊ + SAÚDE" },
+    { estrelas: 5, texto: "Atendimento pontual e equipe super atenciosa com toda a família.", autora: "Paciente VOCÊ + SAÚDE" },
   ],
 
   cta: {
@@ -132,7 +132,7 @@ const CONFIG = {
   },
 
   seo: {
-    titulo: "CEVO — Clínica Odontológica em Santo André",
+    titulo: "VOCÊ + SAÚDE — Clínica Odontológica em Santo André",
     descricao: "Odontologia geral, ortodontia e odontopediatria em Santo André. Atendimento para toda a família.",
   },
 };
