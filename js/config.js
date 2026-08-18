@@ -14,7 +14,7 @@ const CONFIG = {
 
   contato: {
     telefone: "(11) 98888-8888",
-    whatsapp: "5511988888888",
+    whatsapp: "5511 4319-1200",
     whatsappMensagemPadrao: "Olá! Quero agendar uma consulta na VOCÊ + SAÚDE.",
     email: "contato@vocesaude.com.br",
     endereco: "Vila Luzita, Santo André — SP",
@@ -22,7 +22,7 @@ const CONFIG = {
   },
 
   redes: {
-    instagram: "https://www.instagram.com/cevolapasp/",
+    instagram: "https://www.instagram.com/draclaudeanasouza/",
     facebook: "https://facebook.com/cevoodonto",
   },
 
@@ -53,7 +53,7 @@ const CONFIG = {
   sobre: {
     eyebrow: "Sobre a VOCÊ + SAÚDE",
     titulo: "Uma clínica que fala a língua dos pais e a língua das crianças",
-    texto: "Na VOCÊ + SAÚDE, cada consulta é conduzida com técnica e cuidado — e também com paciência. Explicamos cada passo pros pais e transformamos a consulta em algo tranquilo (às vezes até divertido) pras crianças, sem perder o padrão clínico que qualquer tratamento odontológico exige.",
+    texto: "Na Você + Saúde, cada consulta é conduzida com técnica e cuidado — e também com paciência. Explicamos cada passo pros pais e transformamos a consulta em algo tranquilo (às vezes até divertido) pras crianças, sem perder o padrão clínico que qualquer tratamento odontológico exige.",
   },
 
   servicos: [
