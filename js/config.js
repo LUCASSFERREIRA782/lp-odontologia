@@ -14,7 +14,7 @@ const CONFIG = {
 
   contato: {
     telefone: "(11) 98888-8888",
-    whatsapp: "5511 4319-1200",
+    whatsapp: "11 4319-1200",
     whatsappMensagemPadrao: "Olá! Quero agendar uma consulta na VOCÊ + SAÚDE.",
     email: "contato@vocesaude.com.br",
     endereco: "Vila Luzita, Santo André — SP",
