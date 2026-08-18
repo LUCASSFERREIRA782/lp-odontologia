@@ -1,0 +1,145 @@
+/* =========================================================
+   COMPONENTS.CSS — LP Studio
+   Peças reutilizáveis: botões, cards, badges, inputs.
+   ========================================================= */
+
+/* ---------- Botão ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--font-body);
+  font-size:.96rem; font-weight:700;
+  padding:15px 30px;
+  border-radius:var(--radius-pill);
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), background var(--duration) var(--ease);
+  white-space:nowrap;
+}
+.btn:focus-visible{ outline:2px solid var(--color-primary); outline-offset:3px; }
+
+.btn--primary{
+  background:var(--color-primary);
+  color:#fff;
+  box-shadow:var(--shadow-glow);
+}
+.btn--primary:hover{ transform:translateY(-2px); background:#096863; }
+
+.btn--accent{
+  background:var(--color-accent); color:#fff;
+}
+.btn--accent:hover{ transform:translateY(-2px); background:#F26847; }
+
+.btn--ghost{
+  background:transparent;
+  color:var(--color-text);
+  border-color:var(--color-border);
+}
+.btn--ghost:hover{ background:rgba(11,122,117,0.08); border-color:var(--color-primary); }
+
+.btn--whats{ background:#25D366; color:#06301c; }
+.btn--whats:hover{ transform:translateY(-2px); }
+
+/* ---------- Eyebrow / label ---------- */
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-accent);
+  font-size:var(--fs-label); letter-spacing:.1em; text-transform:uppercase;
+  color:var(--color-primary);
+  padding:6px 16px;
+  border:1px solid rgba(11,122,117,0.3);
+  border-radius:var(--radius-pill);
+  background:rgba(53,205,190,0.08);
+}
+.eyebrow::before{ content:'🦷'; font-size:.85em; }
+
+/* ---------- Smile card (elemento assinatura) ---------- */
+.smile-card{
+  position:relative;
+  background:var(--color-bg-elevated);
+  border-radius:var(--radius-lg);
+  padding:var(--space-md);
+  border:1.5px solid var(--color-border);
+  box-shadow:var(--shadow-elevated);
+  transition:transform var(--duration) var(--ease), border-color var(--duration) var(--ease);
+  overflow:hidden;
+}
+.smile-card::after{
+  content:'';
+  position:absolute; left:0; right:0; bottom:0; height:4px;
+  background:var(--gradient-smile);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform var(--duration) var(--ease);
+}
+.smile-card:hover{ transform:translateY(-6px); border-color:transparent; }
+.smile-card:hover::after{ transform:scaleX(1); }
+
+/* ---------- Card de serviço ---------- */
+.service-card .icon{
+  width:54px; height:54px; border-radius:var(--radius-sm);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.6rem;
+  background:linear-gradient(135deg, rgba(11,122,117,.12), rgba(255,200,69,.18));
+  margin-bottom:var(--space-sm);
+}
+.service-card h3{ font-family:var(--font-display); font-size:var(--fs-h3); margin-bottom:8px; }
+.service-card p{ color:var(--color-text-muted); font-size:var(--fs-small); line-height:1.55; margin-bottom:18px; }
+.service-card .price-row{
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--color-border); padding-top:14px;
+}
+.service-card .price{ font-family:var(--font-accent); font-weight:700; font-size:1rem; color:var(--color-primary); }
+.service-card .book-link{ font-family:var(--font-body); font-weight:700; font-size:.85rem; color:var(--color-text); }
+.service-card .book-link:hover{ color:var(--color-accent); }
+
+/* ---------- Badge de review ---------- */
+.review-card{
+  background:var(--color-bg-elevated);
+  border:1px solid var(--color-border);
+  border-radius:var(--radius-md);
+  padding:var(--space-md);
+  box-shadow:var(--shadow-elevated);
+}
+.review-card .stars{ color:var(--color-kid); letter-spacing:2px; margin-bottom:12px; font-size:1.05rem; }
+.review-card p{ font-size:1.02rem; line-height:1.6; margin-bottom:16px; }
+.review-card .author{ font-family:var(--font-accent); font-size:.82rem; color:var(--color-text-muted); }
+
+/* ---------- Badge infantil (odontopediatria) ---------- */
+.kid-badge{
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--color-kid); color:#4A3200;
+  font-family:var(--font-display); font-weight:600; font-size:.85rem;
+  padding:8px 16px; border-radius:var(--radius-pill);
+}
+
+/* ---------- Mascote (dente sorridente em CSS puro) ---------- */
+.tooth-mascot{
+  width:120px; height:130px; position:relative; flex-shrink:0;
+}
+.tooth-mascot .body{
+  position:absolute; inset:0;
+  background:#fff;
+  border-radius:50% 50% 46% 46% / 55% 55% 45% 45%;
+  box-shadow:var(--shadow-elevated);
+}
+.tooth-mascot .body::before, .tooth-mascot .body::after{
+  content:''; position:absolute; bottom:-10px; width:26px; height:30px; background:#fff;
+  border-radius:0 0 50% 50%;
+}
+.tooth-mascot .body::before{ left:14px; }
+.tooth-mascot .body::after{ right:14px; }
+.tooth-mascot .eyes{ position:absolute; top:38px; left:0; right:0; display:flex; justify-content:center; gap:22px; }
+.tooth-mascot .eyes span{ width:9px; height:9px; border-radius:50%; background:var(--color-text); }
+.tooth-mascot .smile{
+  position:absolute; top:58px; left:50%; transform:translateX(-50%);
+  width:38px; height:19px; border-bottom:5px solid var(--color-accent); border-radius:0 0 40px 40px;
+}
+.tooth-mascot .cheek{ position:absolute; top:52px; width:12px; height:7px; border-radius:50%; background:rgba(255,129,99,.35); }
+.tooth-mascot .cheek.l{ left:14px; } .tooth-mascot .cheek.r{ right:14px; }
+
+/* ---------- Input (formulário de contato, se usado) ---------- */
+.field{
+  width:100%; background:var(--color-bg-elevated);
+  border:1px solid var(--color-border); border-radius:var(--radius-sm);
+  padding:14px 16px; color:var(--color-text); font-family:var(--font-body); font-size:.95rem;
+}
+.field:focus{ outline:none; border-color:var(--color-primary); }

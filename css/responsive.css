@@ -1,0 +1,30 @@
+/* =========================================================
+   RESPONSIVE.CSS — LP Studio
+   Ajustes por breakpoint. Mobile-first nas regras base;
+   aqui ficam as exceções de telas maiores/menores.
+   ========================================================= */
+
+/* ---------- Tablet (≤ 860px) já tratado inline nos componentes ---------- */
+
+/* ---------- Celular (≤ 560px) ---------- */
+@media (max-width:560px){
+  :root{ --gutter:6vw; }
+
+  #navbar .nav-cta .btn--ghost{ display:none; }
+
+  #hero{ min-height:auto; padding-top:calc(var(--space-xl) + 20px); }
+  #hero .hero-stats{ gap:var(--space-md); }
+
+  .section-pad{ padding:var(--space-xl) var(--gutter); }
+
+  #galeria .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:120px; }
+
+  #cta{ margin:0 4vw; padding:var(--space-xl) var(--space-sm); }
+
+  footer{ padding:var(--space-lg) 6vw; }
+}
+
+/* ---------- Telas grandes (≥ 1440px): respiro extra ---------- */
+@media (min-width:1440px){
+  :root{ --container-max:1320px; }
+}

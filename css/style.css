@@ -1,0 +1,177 @@
+/* =========================================================
+   STYLE.CSS — LP Studio
+   Layout estrutural: navbar, hero, seções.
+   Não colocar regras de botão/card aqui — isso vive em components.css.
+   ========================================================= */
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family:var(--font-body);
+  background:var(--color-bg);
+  color:var(--color-text);
+  overflow-x:hidden;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; }
+section{ position:relative; }
+h1,h2,h3{ font-family:var(--font-display); font-weight:700; line-height:1.08; }
+
+.container{ max-width:var(--container-max); margin:0 auto; padding:0 var(--gutter); }
+
+/* ---------- Loader ---------- */
+#loader{
+  position:fixed; inset:0; z-index:999;
+  background:var(--color-bg);
+  display:flex; align-items:center; justify-content:center;
+  transition:opacity .6s ease, visibility .6s ease;
+}
+#loader.is-hidden{ opacity:0; visibility:hidden; pointer-events:none; }
+#loader .mark{
+  font-family:var(--font-display); font-size:1.6rem; letter-spacing:.08em;
+  background:var(--gradient-smile); -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:pulse-loader 1.4s ease-in-out infinite;
+}
+@keyframes pulse-loader{ 0%,100%{ opacity:.5; } 50%{ opacity:1; } }
+
+/* ---------- Navbar ---------- */
+#navbar{
+  position:sticky; top:0; z-index:80;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px var(--gutter);
+  background:rgba(242,251,249,0.82);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--color-border);
+}
+#navbar .brand{ font-family:var(--font-display); font-size:1.2rem; font-weight:700; letter-spacing:.02em; }
+#navbar .nav-links{ display:flex; gap:30px; font-size:.9rem; }
+#navbar .nav-links a{ opacity:.82; transition:opacity var(--duration); }
+#navbar .nav-links a:hover{ opacity:1; }
+#navbar .nav-cta{ display:flex; gap:10px; }
+@media (max-width:860px){ #navbar .nav-links{ display:none; } }
+
+/* ---------- Hero ---------- */
+#hero{
+  min-height:92vh; display:flex; flex-direction:column; justify-content:center;
+  padding:var(--space-xl) var(--gutter) var(--space-2xl);
+  overflow:hidden;
+}
+#hero .blob{ position:absolute; border-radius:50%; filter:blur(60px); opacity:.55; z-index:0; }
+#hero .blob-1{ width:420px; height:420px; background:var(--color-primary); top:-120px; right:-80px; }
+#hero .blob-2{ width:320px; height:320px; background:var(--color-secondary); bottom:-100px; left:10vw; }
+#hero .blob-3{ width:220px; height:220px; background:var(--color-kid); top:30%; right:22vw; opacity:.35; }
+
+#hero .hero-inner{ position:relative; z-index:2; max-width:760px; }
+#hero .eyebrow{ margin-bottom:var(--space-sm); }
+#hero h1{ font-size:var(--fs-hero); margin:var(--space-sm) 0; }
+#hero h1 .glow{ background:var(--gradient-smile); -webkit-background-clip:text; background-clip:text; color:transparent; }
+#hero p{ font-size:1.1rem; color:var(--color-text-muted); max-width:48ch; margin-bottom:var(--space-md); line-height:1.6; }
+#hero .hero-cta{ display:flex; gap:16px; flex-wrap:wrap; }
+#hero .hero-stats{ display:flex; gap:var(--space-lg); margin-top:var(--space-xl); flex-wrap:wrap; }
+#hero .hero-stats .stat b{ font-family:var(--font-display); font-size:1.8rem; display:block; }
+#hero .hero-stats .stat span{ font-size:.82rem; color:var(--color-text-muted); }
+
+/* ---------- Section head (padrão pra todas as seções) ---------- */
+.section-head{ max-width:56ch; margin-bottom:var(--space-lg); }
+.section-head h2{ margin-top:var(--space-xs); }
+.section-head p{ color:var(--color-text-muted); margin-top:10px; }
+
+.section-alt{ background:var(--color-bg-panel); }
+.section-pad{ padding:var(--space-2xl) var(--gutter); }
+
+/* ---------- Sobre ---------- */
+#sobre .sobre-grid{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-xl); align-items:center; }
+#sobre .sobre-visual{
+  aspect-ratio:4/5; border-radius:var(--radius-lg);
+  background:linear-gradient(150deg, var(--color-primary), var(--color-secondary) 55%, var(--color-kid));
+  position:relative; overflow:hidden;
+}
+#sobre .sobre-visual::after{
+  content:'CEVO'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-size:1.4rem; letter-spacing:.3em; color:rgba(255,255,255,.5);
+}
+@media (max-width:860px){ #sobre .sobre-grid{ grid-template-columns:1fr; } }
+
+/* ---------- Grids ---------- */
+.grid-3{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:var(--space-md); }
+.grid-4{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:var(--space-sm); }
+
+/* ---------- Diferenciais ---------- */
+.diferencial{ text-align:left; padding:var(--space-md) 0; border-top:1px solid var(--color-border); }
+.diferencial .num{ font-family:var(--font-accent); color:var(--color-kid); font-size:.8rem; }
+.diferencial h3{ font-size:1.15rem; margin:8px 0 6px; }
+.diferencial p{ color:var(--color-text-muted); font-size:.9rem; line-height:1.5; }
+
+/* ---------- Galeria ---------- */
+#galeria .gallery-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:160px; gap:12px;
+}
+#galeria .gallery-item{
+  border-radius:var(--radius-sm); cursor:pointer; position:relative; overflow:hidden;
+  display:flex; align-items:flex-end; padding:14px;
+  font-family:var(--font-accent); font-size:.78rem; color:rgba(255,255,255,.85);
+  transition:transform var(--duration) var(--ease);
+}
+#galeria .gallery-item:hover{ transform:scale(1.03); }
+#galeria .gallery-item.tall{ grid-row:span 2; }
+@media (max-width:760px){ #galeria .gallery-grid{ grid-template-columns:repeat(2,1fr); } }
+
+/* ---------- Avaliações ---------- */
+#avaliacoes .slider-track{ display:flex; gap:var(--space-md); overflow:hidden; }
+#avaliacoes .slider-dots{ display:flex; gap:8px; margin-top:var(--space-md); justify-content:center; }
+#avaliacoes .dot{ width:8px; height:8px; border-radius:50%; background:var(--color-border); cursor:pointer; transition:background var(--duration); }
+#avaliacoes .dot.is-active{ background:var(--color-primary); }
+
+/* ---------- CTA ---------- */
+#cta{
+  text-align:center; border-radius:var(--radius-lg);
+  margin:0 var(--gutter);
+  padding:var(--space-2xl) var(--space-lg);
+  background:linear-gradient(135deg, rgba(11,122,117,.10), rgba(255,200,69,.16));
+  border:1px solid var(--color-border);
+}
+#cta h2{ font-size:var(--fs-h2); max-width:16ch; margin:0 auto var(--space-sm); }
+#cta p{ color:var(--color-text-muted); max-width:44ch; margin:0 auto var(--space-md); }
+#cta .cta-row{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+/* ---------- Horários + Mapa ---------- */
+#horarios-mapa .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-xl); }
+.hours-list{ margin-top:var(--space-sm); }
+.hours-list li{ display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--color-border); font-family:var(--font-accent); font-size:.9rem; }
+.map-card{
+  border-radius:var(--radius-lg); padding:var(--space-md);
+  background:var(--color-bg-elevated); border:1px solid var(--color-border);
+  display:flex; flex-direction:column; gap:14px;
+}
+.map-card .pin{ font-size:1.6rem; }
+@media (max-width:860px){ #horarios-mapa .grid-2{ grid-template-columns:1fr; } }
+
+/* ---------- Contato ---------- */
+#contato .contato-grid{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-xl); }
+#contato .contato-info li{ display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--color-border); font-size:.95rem; }
+@media (max-width:860px){ #contato .contato-grid{ grid-template-columns:1fr; } }
+
+/* ---------- Footer ---------- */
+footer{
+  padding:var(--space-xl) var(--gutter) var(--space-lg);
+  border-top:1px solid var(--color-border);
+  display:flex; flex-direction:column; align-items:center; gap:var(--space-sm); text-align:center;
+}
+footer .socials{ display:flex; gap:14px; }
+footer .socials a{
+  width:40px; height:40px; border-radius:50%; border:1px solid var(--color-border);
+  display:flex; align-items:center; justify-content:center; transition:all var(--duration);
+}
+footer .socials a:hover{ background:var(--gradient-smile); border-color:transparent; }
+footer .fine{ font-size:.78rem; color:var(--color-text-muted); font-family:var(--font-accent); }
+
+/* ---------- Botão flutuante WhatsApp ---------- */
+#whats-float{
+  position:fixed; bottom:24px; right:24px; z-index:70;
+  width:58px; height:58px; border-radius:50%;
+  background:#25D366; display:flex; align-items:center; justify-content:center;
+  font-size:1.5rem; box-shadow:0 14px 30px -8px rgba(0,0,0,.5);
+  animation:whats-pulse 2.4s ease-in-out infinite;
+}
+@keyframes whats-pulse{ 0%,100%{ box-shadow:0 0 0 0 rgba(37,211,102,.5);} 50%{ box-shadow:0 0 0 14px rgba(37,211,102,0);} }

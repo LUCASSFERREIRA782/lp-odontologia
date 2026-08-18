@@ -1,0 +1,67 @@
+/* =========================================================
+   VARIABLES.CSS — LP Studio
+   Todas as cores, fontes e espaçamentos do projeto.
+   Para trocar de cliente/identidade visual, altere SOMENTE este arquivo.
+   ========================================================= */
+
+:root{
+
+  /* ---- Cores base ---- */
+  --color-bg:            #F2FBF9;   /* fundo principal — branco-menta clean */
+  --color-bg-panel:      #E3F4F0;   /* painéis/seções alternadas */
+  --color-bg-elevated:   #FFFFFF;   /* cards, elementos elevados */
+
+  /* ---- Cores de marca ---- */
+  --color-primary:       #0B7A75;   /* teal profundo — confiança clínica */
+  --color-secondary:     #35CDBE;   /* água-marinha — clean, tecnológico */
+  --color-accent:        #FF8163;   /* coral — energia, CTA */
+  --color-kid:           #FFC845;   /* amarelo-sol — odontopediatria */
+  --gradient-smile: linear-gradient(100deg, var(--color-primary) 0%, var(--color-secondary) 55%, var(--color-kid) 100%);
+
+  /* ---- Texto ---- */
+  --color-text:          #0B2530;
+  --color-text-muted:    #4C6B70;
+  --color-text-inverse:  #FFFFFF;
+
+  /* ---- Bordas/linhas ---- */
+  --color-border:        rgba(11,37,48,0.10);
+  --color-border-glow:   rgba(11,122,117,0.35);
+
+  /* ---- Tipografia ---- */
+  --font-display: 'Fredoka', sans-serif;
+  --font-body:    'Nunito', sans-serif;
+  --font-accent:  'DM Mono', monospace;
+
+  /* ---- Escala tipográfica ---- */
+  --fs-hero:    clamp(2.4rem, 5.6vw, 4.4rem);
+  --fs-h2:      clamp(1.8rem, 3.8vw, 2.7rem);
+  --fs-h3:      1.35rem;
+  --fs-body:    1rem;
+  --fs-small:   0.85rem;
+  --fs-label:   0.75rem;
+
+  /* ---- Espaçamentos ---- */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  28px;
+  --space-lg:  48px;
+  --space-xl:  88px;
+  --space-2xl: 140px;
+
+  /* ---- Raios e sombras ---- */
+  --radius-sm: 14px;
+  --radius-md: 24px;
+  --radius-lg: 36px;
+  --radius-pill: 999px;
+
+  --shadow-glow: 0 16px 40px -14px rgba(11,122,117,0.4);
+  --shadow-elevated: 0 24px 60px -24px rgba(11,37,48,0.18);
+
+  /* ---- Layout ---- */
+  --container-max: 1180px;
+  --gutter: 6vw;
+
+  /* ---- Transições ---- */
+  --ease: cubic-bezier(.22,.9,.32,1);
+  --duration: .35s;
+}

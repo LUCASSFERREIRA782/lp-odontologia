@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOCÊ + SAÚDE — Clínica Odontológica</title>
+<meta name="description" content="Clínica odontológica em Santo André — atendimento para toda a família, incluindo odontopediatria.">
+<meta name="theme-color" content="#0B7A75">
+
+<!-- Open Graph -->
+<meta property="og:title" content="CEVO — Clínica Odontológica">
+<meta property="og:description" content="Odontologia geral, ortodontia e odontopediatria em Santo André.">
+<meta property="og:type" content="business.business">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://cevoodonto.com.br/">
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!-- Schema.org — LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "CEVO",
+  "address": { "@type": "PostalAddress", "addressLocality": "Santo André", "addressRegion": "SP", "addressCountry": "BR" }
+}
+</script>
+</head>
+<body>
+
+<!-- ========== LOADER ========== -->
+<div id="loader"><span class="mark">VOCÊ + SAÚDE</span></div>
+
+<!-- ========== NAVBAR ========== -->
+<header id="navbar">
+  <a href="#hero" class="brand" data-brand>CEVO</a>
+  <nav class="nav-links" aria-label="Navegação principal">
+    <a href="#servicos">Serviços</a>
+    <a href="#kids">Kids</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#avaliacoes">Avaliações</a>
+    <a href="#horarios-mapa">Horários</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="#" class="btn btn--ghost" data-boksy-link>Agendar horário</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <div class="hero-inner">
+      <span class="eyebrow" data-hero-eyebrow>Salão de beleza</span>
+      <h1>
+        <span data-hero-titulo-prefixo>Sua beleza,</span><br>
+        <span class="glow" data-hero-titulo-destaque>no seu tempo</span>
+      </h1>
+      <p data-hero-subtitulo>Descrição do salão.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn--primary" data-cta-whats>Agendar no WhatsApp</a>
+        <a href="#servicos" class="btn btn--ghost">Ver serviços</a>
+      </div>
+      <div class="hero-stats" data-hero-stats></div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+  <section id="sobre" class="section-pad">
+    <div class="container sobre-grid">
+      <div>
+        <span class="eyebrow" data-sobre-eyebrow>Sobre</span>
+        <h2 class="section-head" data-sobre-titulo style="margin-top:14px;">Título sobre</h2>
+        <p data-sobre-texto>Texto sobre.</p>
+      </div>
+      <div class="sobre-visual" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ========== SERVIÇOS ========== -->
+  <section id="servicos" class="section-pad section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Serviços</span>
+        <h2>O que fazemos por você</h2>
+        <p>Cada serviço com preço claro e agendamento direto.</p>
+      </div>
+      <div class="grid-3" data-servicos-grid></div>
+    </div>
+  </section>
+
+  <!-- ========== DIFERENCIAIS ========== -->
+  <section id="diferenciais" class="section-pad">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Diferenciais</span>
+        <h2>Por que escolher a CEVO</h2>
+      </div>
+      <div class="grid-4" data-diferenciais></div>
+    </div>
+  </section>
+
+  <!-- ========== ODONTOPEDIATRIA (especial kids) ========== -->
+  <section id="kids" class="section-pad">
+    <div class="container">
+      <div class="smile-card" style="display:flex;gap:var(--space-lg);align-items:center;flex-wrap:wrap;padding:var(--space-lg);">
+        <div class="tooth-mascot" aria-hidden="true">
+          <div class="body"></div>
+          <div class="eyes"><span></span><span></span></div>
+          <div class="cheek l"></div><div class="cheek r"></div>
+          <div class="smile"></div>
+        </div>
+        <div style="flex:1;min-width:260px;">
+          <span class="eyebrow" data-kids-eyebrow>Especial Kids</span>
+          <h2 style="margin-top:14px;" data-kids-titulo>Título kids</h2>
+          <p style="color:var(--color-text-muted);margin-top:10px;max-width:52ch;" data-kids-texto>Texto kids.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--space-sm);" data-kids-badges></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERIA ========== -->
+  <section id="galeria" class="section-pad section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Galeria</span>
+        <h2>Trabalhos recentes</h2>
+      </div>
+      <div class="gallery-grid" data-gallery-grid></div>
+    </div>
+  </section>
+
+  <!-- ========== AVALIAÇÕES ========== -->
+  <section id="avaliacoes" class="section-pad">
+    <div class="container" style="max-width:640px;">
+      <div class="section-head" style="margin:0 auto var(--space-lg);text-align:center;">
+        <span class="eyebrow">Avaliações</span>
+        <h2>Quem já veio, recomenda</h2>
+      </div>
+      <div class="slider-track" data-reviews-track></div>
+      <div class="slider-dots" data-reviews-dots></div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="section-pad">
+    <div id="cta">
+      <h2 data-cta-titulo>Pronta pra marcar seu horário?</h2>
+      <p data-cta-texto>Fale com a gente agora.</p>
+      <div class="cta-row">
+        <a href="#" class="btn btn--primary btn--whats" data-cta-whats>Chamar no WhatsApp</a>
+        <a href="#" class="btn btn--ghost" data-boksy-link>Agendar online</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HORÁRIOS + MAPA ========== -->
+  <section id="horarios-mapa" class="section-pad section-alt">
+    <div class="container grid-2">
+      <div>
+        <span class="eyebrow">Horários</span>
+        <h2 style="margin-top:14px;">Quando estamos abertas</h2>
+        <ul class="hours-list" data-horarios-list></ul>
+      </div>
+      <div class="map-card">
+        <span class="pin">📍</span>
+        <div>
+          <strong data-endereco>Endereço</strong>
+        </div>
+        <a href="#" class="btn btn--ghost" data-maps-link target="_blank" rel="noopener">Abrir no mapa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTATO ========== -->
+  <section id="contato" class="section-pad">
+    <div class="container contato-grid">
+      <div>
+        <span class="eyebrow">Contato</span>
+        <h2 style="margin-top:14px;">Fale com a gente</h2>
+        <ul class="contato-info" style="margin-top:var(--space-md);">
+          <li>📞 <span data-contato-telefone></span></li>
+          <li>✉️ <span data-contato-email></span></li>
+          <li>📍 <span data-contato-endereco></span></li>
+        </ul>
+      </div>
+      <div class="smile-card">
+        <h3 style="margin-bottom:14px;">Prefere agendar direto?</h3>
+        <p style="color:var(--color-text-muted);font-size:.9rem;margin-bottom:20px;">Sem formulário, sem espera — clique e já cai no WhatsApp.</p>
+        <a href="#" class="btn btn--primary" data-cta-whats style="width:100%;justify-content:center;">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <span class="brand" data-brand style="font-family:var(--font-display);font-size:1.1rem;">CEVO</span>
+  <div class="socials">
+    <a href="#" data-social-instagram target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+    <a href="#" data-social-facebook target="_blank" rel="noopener" aria-label="Facebook">👍</a>
+    <a href="#" data-social-whatsapp target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  </div>
+  <p class="fine">© <span data-footer-ano></span> CEVO — Clínica Odontológica — todos os direitos reservados</p>
+</footer>
+
+<!-- ========== BOTÃO FLUTUANTE WHATSAPP ========== -->
+<a href="#" id="whats-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">💬</a>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
